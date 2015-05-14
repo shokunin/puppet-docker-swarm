@@ -1,0 +1,6 @@
+.tmp
+.librarian
+.vagrant
+puppet/modules/*
+.rvmrc
+Gemfile.lock
