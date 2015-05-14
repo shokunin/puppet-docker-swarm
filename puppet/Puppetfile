@@ -22,3 +22,8 @@ mod 'epel',
   :git => 'git://github.com/stahnma/puppet-module-epel.git',
   :ref => 'master'
 
+mod 'consul',
+  :git => 'https://github.com/solarkennedy/puppet-consul.git'
+
+mod 'staging',
+  :git => 'https://github.com/nanliu/puppet-staging.git'
