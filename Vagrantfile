@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     server.vm.network "private_network", ip: "172.16.3.101"
     server.vm.synced_folder "puppet/modules", "/tmp/vagrant-puppet/puppet/modules"
     server.vm.provision :puppet do |puppet|
+      puppet.hiera_config_path = "puppet/ext/hiera.yaml"
       puppet.manifests_path = "puppet/manifests"
       puppet.options = ["--modulepath", "/tmp/vagrant-puppet/puppet/modules"]
       puppet.manifest_file = "swarm.pp"
@@ -21,6 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     node.vm.network "private_network", ip: "172.16.3.102"
     node.vm.synced_folder "puppet/modules", "/tmp/vagrant-puppet/puppet/modules"
     node.vm.provision :puppet do |puppet|
+      puppet.hiera_config_path = "puppet/ext/hiera.yaml"
       puppet.manifests_path = "puppet/manifests"
       puppet.options = ["--modulepath", "/tmp/vagrant-puppet/puppet/modules"]
       puppet.manifest_file = "node.pp"
@@ -33,6 +35,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     node.vm.network "private_network", ip: "172.16.3.103"
     node.vm.synced_folder "puppet/modules", "/tmp/vagrant-puppet/puppet/modules"
     node.vm.provision :puppet do |puppet|
+      puppet.hiera_config_path = "puppet/ext/hiera.yaml"
       puppet.manifests_path = "puppet/manifests"
       puppet.options = ["--modulepath", "/tmp/vagrant-puppet/puppet/modules"]
       puppet.manifest_file = "node.pp"
