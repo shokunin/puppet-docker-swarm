@@ -21,7 +21,7 @@ class { '::consul':
     'data_dir'         => '/opt/consul',
     'datacenter'       => 'vagrant',
     'log_level'        => 'INFO',
-    'node_name'        => 'server',
+    'node_name'        => $::hostname,
     'server'           => true,
     'ui_dir'           => '/opt/consul/ui',
   }
