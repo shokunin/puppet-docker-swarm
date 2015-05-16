@@ -6,7 +6,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     server.vm.box = "ubuntu/trusty64"
     server.vm.host_name = 'swarm'
     server.vm.network "forwarded_port", guest: 8500, host: 8500
-    server.vm.network "forwarded_port", guest: 2376, host: 2376
+    server.vm.network "forwarded_port", guest: 2378, host: 2378
     server.vm.network "private_network", ip: "172.16.3.101"
     server.vm.synced_folder "puppet/modules", "/tmp/vagrant-puppet/puppet/modules"
     server.vm.provision :puppet do |puppet|

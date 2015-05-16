@@ -29,7 +29,7 @@ using
 on localhost determine that everyone is running
 
 ```
-$ sudo docker -H tcp://localhost:2376 info
+$ sudo docker -H tcp://localhost:2378 info
 Containers: 7
 Strategy: spread
 Filters: affinity, health, constraint, port, dependency
@@ -47,13 +47,13 @@ Nodes: 2
 spin up a redis container
 
 ```
-$ sudo docker -H tcp://localhost:2376 run --name test-redis -d redis
+$ sudo docker -H tcp://localhost:2378 run --name test-redis -d redis
 ```
 
 see it running
 
 ```
-$ sudo docker -H tcp://localhost:2376 ps
+$ sudo docker -H tcp://localhost:2378 ps
 CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS               NAMES
 67f550d51d45        redis:latest        "/entrypoint.sh redi   10 minutes ago      Up 9 minutes        6379/tcp            node2/test-redis    
 ```
