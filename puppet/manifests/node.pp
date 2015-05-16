@@ -15,6 +15,12 @@ class { '::consul':
   }
 }
 
+consul::service { 'data_node':
+  port    => 2112,
+  tags    => ['prod']
+}
+
+
 docker::run { 'swarm':
   image   => swarm,
   command => "join --addr=${::ipaddress_eth1}:2375 consul://172.16.3.101:8500/swarm"

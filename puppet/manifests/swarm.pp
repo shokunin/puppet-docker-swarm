@@ -11,8 +11,8 @@ docker::image { 'swarm':
 
 docker::run { 'swarm':
   image   => swarm,
-  command => 'manage -H tcp://0.0.0.0:2376 consul://172.16.3.101:8500/swarm',
-  ports   => [ '2376:2376' ],
+  command => 'manage -H tcp://0.0.0.0:2378 consul://172.16.3.101:8500/swarm',
+  ports   => [ '2378:2378' ],
 }
 
 class { '::consul':
