@@ -4,3 +4,4 @@
 puppet/modules/*
 .rvmrc
 Gemfile.lock
+terraform/terraform.tfstat*
