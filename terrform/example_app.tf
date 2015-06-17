@@ -1,6 +1,6 @@
 # Configure the Docker provider
 provider "docker" {
-    host = "tcp://${var.swarm_host}:${var.swarm_port}/"
+  host = "tcp://localhost:2378/"
 }
 
 # Create a container
