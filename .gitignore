@@ -4,4 +4,5 @@
 puppet/modules/*
 .rvmrc
 Gemfile.lock
-terraform/terraform.tfstat*
+terrform/terraform.tfstate
+terrform/terraform.tfstate.backup
